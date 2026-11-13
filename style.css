@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0f172a; /* Azul bem escuro */
+    color: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+header p {
+    color: #94a3b8;
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+/* Estilo do título e configuração da animação */
+#titulo-principal {
+    font-size: 3rem;
+    color: #eab308; /* Dourado */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.animar-texto {
+    animation: pulsarTexto 2.5s ease-in-out infinite;
+}
+
+/* Definição da animação: aumenta as letras e volta ao normal */
+@keyframes pulsarTexto {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.25); /* Aumenta 25% */
+        color: #fde047; /* Brilho dourado mais claro */
+    }
+    100% {
+        transform: scale(1); /* Volta ao tamanho normal */
+    }
+}
+
+main {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Estilo das 3 seções */
+.card-futuro {
+    background-color: #1e293b;
+    border-left: 6px solid #eab308;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.card-futuro:hover {
+    transform: translateX(10px);
+}
+
+.card-futuro h2 {
+    color: #eab308;
+    margin-bottom: 12px;
+    font-size: 1.6rem;
+}
+
+.card-futuro p {
+    line-height: 1.6;
+    font-size: 1.1rem;
+    color: #e2e8f0;
+}
